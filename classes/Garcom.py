@@ -5,12 +5,12 @@ import time
 
 
 class Garcom(threading.Thread):
-    def __init__(self, nome, clientes, gerenciamento, pedidos_anotados):
+    def __init__(self, nome, clientes, gerenciamento):
         threading.Thread.__init__(self)
         self.nome = nome
         self.gerenciamento = gerenciamento
         self.clientes = clientes
-        self.pedidos_anotados = pedidos_anotados
+        self.pedidos_anotados = []
 
     def recebe_todos_os_pedidos(self):
         qnt = len(self.pedidos_anotados)
